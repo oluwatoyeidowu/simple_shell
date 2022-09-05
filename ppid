@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <unistd.h>
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	int a = 3;
+	int b = 5;
+	int sum = a + b;
+	pid_t pid;
+	pid_t ppid;
+
+	pid = getpid();
+	ppid = getppid();
+
+	printf("Sum is %d\n", sum);
+	printf("Pid is %u\n", pid);
+	printf("PPid is %u\n", ppid);
+
+	return (0);
+}
